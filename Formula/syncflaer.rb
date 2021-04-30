@@ -1,4 +1,4 @@
-class SyncFlaer < Formula
+class Syncflaer < Formula
     desc "SyncFlaer"
     homepage "https://containeroo.ch"
     version "4.0.0"
