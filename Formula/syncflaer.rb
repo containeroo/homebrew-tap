@@ -1,24 +1,24 @@
 class Syncflaer < Formula
     desc "SyncFlaer"
     homepage "https://containeroo.ch"
-    version "4.0.1"
+    version "5.1.0"
     bottle :unneeded
 
     if OS.mac? && Hardware::CPU.intel?
-      url "https://github.com/containeroo/syncflaer/releases/download/v4.0.1/syncflaer-v4.0.1-darwin-amd64.tar.gz"
-      sha256 "fee7cafb1354a333dbba8d1d97558669a6d419e1e4836316a3d0047cddcdc700"
+      url "https://github.com/containeroo/syncflaer/releases/download/v5.1.0/syncflaer-v5.1.0-darwin-amd64.tar.gz"
+      sha256 "93a908addd2d4433f57b006053b3548c82229183d2e23e91dc64e9b786262add"
     end
     if OS.mac? && Hardware::CPU.arm?
-      url "https://github.com/containeroo/syncflaer/releases/download/v4.0.1/syncflaer-v4.0.1-darwin-arm64.tar.gz"
-      sha256 "ce99d29b8d6b68aa899cceec98fee6d421229f57bca10b3ea5c78541793c7331"
+      url "https://github.com/containeroo/syncflaer/releases/download/v5.1.0/syncflaer-v5.1.0-darwin-arm64.tar.gz"
+      sha256 "0c3825d7d473dd5c6f3e7fad02c5e3067823e1d23ae5aeec2b3a0039e5febdc8"
     end
     if OS.linux? && Hardware::CPU.intel?
-      url "https://github.com/containeroo/syncflaer/releases/download/v4.0.1/syncflaer-v4.0.1-linux-amd64.tar.gz"
-      sha256 "611cbd8bd26e1551cebda447934f0270dd2081af14709f647a74574587f7ba9a"
+      url "https://github.com/containeroo/syncflaer/releases/download/v5.1.0/syncflaer-v5.1.0-linux-amd64.tar.gz"
+      sha256 "46f41836e4c594beaf731dee97594a007b20bcc216ad5395e5922f251dbd4323"
     end
     if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/syncflaer/releases/download/v4.0.1/syncflaer-v4.0.1-linux-arm64.tar.gz"
-      sha256 "18135d9d37f53d12454ddb175fb5ea34fb6f4cdc5c8d809b60c893b6835f19bf"
+      url "https://github.com/containeroo/syncflaer/releases/download/v5.1.0/syncflaer-v5.1.0-linux-arm64.tar.gz"
+      sha256 "44b589f0dc9a0375e7ae1144f3995b08b2dd094d9cad58b14ee72d1013013be4"
     end
 
     def install
