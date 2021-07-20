@@ -1,4 +1,4 @@
-  class certinfo < Formula
+  class Certinfo < Formula
     desc "certinfo"
     homepage "https://containeroo.ch"
     version "1.0.0"
