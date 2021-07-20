@@ -1,24 +1,24 @@
   class Certinfo < Formula
     desc "certinfo"
     homepage "https://containeroo.ch"
-    version "1.0.1"
+    version "1.0.2"
     bottle :unneeded
 
     if OS.mac? && Hardware::CPU.intel?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.0.1/certinfo-v1.0.1-darwin-amd64.tar.gz"
-      sha256 "af1cc948e07348f0686fe214d922f84636f1a8601687e51438d3ba883a4bd9ce"
+      url "https://github.com/containeroo/certinfo/releases/download/v1.0.2/certinfo-v1.0.2-darwin-amd64.tar.gz"
+      sha256 "10fe5dbb3782ee2d81e736d69fcc8697bfe1d2682ddd86dc9ab740ab2123773f"
     end
     if OS.mac? && Hardware::CPU.arm?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.0.1/certinfo-v1.0.1-darwin-arm64.tar.gz"
-      sha256 "48ff7a9841a46591ea61387b9f7e780c0010ca8b9642d89df0b93c55acc63992"
+      url "https://github.com/containeroo/certinfo/releases/download/v1.0.2/certinfo-v1.0.2-darwin-arm64.tar.gz"
+      sha256 "98180fc908fc906d3c081d31f581127d2fd560fde60f4bb050306d350fe5b002"
     end
     if OS.linux? && Hardware::CPU.intel?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.0.1/certinfo-v1.0.1-linux-amd64.tar.gz"
-      sha256 "24d74661fd2008907767711a0635a4e2606a1bdca5c3540b0cadc1146e0278e4"
+      url "https://github.com/containeroo/certinfo/releases/download/v1.0.2/certinfo-v1.0.2-linux-amd64.tar.gz"
+      sha256 "bb4b361b047fbfc08fed1ff05c5ec7e846a6ad681bbb0b7265a9ad353d25ec60"
     end
     if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.0.1/certinfo-v1.0.1-linux-arm64.tar.gz"
-      sha256 "d86be12f20072600eed5b3134d3f9d0ecf1ae4cb6c520bffd4dc0698afd1d5b9"
+      url "https://github.com/containeroo/certinfo/releases/download/v1.0.2/certinfo-v1.0.2-linux-arm64.tar.gz"
+      sha256 "14c9749cedd639b535f00cc7c103817c9cecc7c1c5119531a0a45767e6e76df0"
     end
 
     def install
