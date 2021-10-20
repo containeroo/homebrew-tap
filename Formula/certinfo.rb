@@ -2,7 +2,6 @@
     desc "certinfo"
     homepage "https://containeroo.ch"
     version "1.2.0"
-    bottle :unneeded
 
     if OS.mac? && Hardware::CPU.intel?
       url "https://github.com/containeroo/certinfo/releases/download/v1.2.0/certinfo-v1.2.0-darwin-amd64.tar.gz"
