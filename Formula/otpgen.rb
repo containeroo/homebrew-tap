@@ -2,7 +2,6 @@
     desc "otpgen"
     homepage "https://containeroo.ch"
     version "2.0.0"
-    bottle :unneeded
 
     if OS.mac? && Hardware::CPU.intel?
       url "https://github.com/containeroo/otpgen/releases/download/v2.0.0/otpgen-v2.0.0-darwin-amd64.tar.gz"

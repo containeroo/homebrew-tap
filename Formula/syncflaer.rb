@@ -2,7 +2,6 @@ class Syncflaer < Formula
     desc "SyncFlaer"
     homepage "https://containeroo.ch"
     version "5.1.0"
-    bottle :unneeded
 
     if OS.mac? && Hardware::CPU.intel?
       url "https://github.com/containeroo/syncflaer/releases/download/v5.1.0/syncflaer-v5.1.0-darwin-amd64.tar.gz"
