@@ -5,21 +5,21 @@
 class Dologen < Formula
   desc "Simple CLI tool to generate Docker config.json with registry credentials"
   homepage "https://containeroo.ch"
-  version "1.0.1"
+  version "1.1.0"
   license "GNU General Public License v3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/containeroo/dologen/releases/download/v1.0.1/dologen_1.0.1_darwin_arm64.tar.gz"
-      sha256 "1251a835cc6c9396291395e265d4d1f7f3755c679d13387cd07729be9b82cc75"
+    if Hardware::CPU.intel?
+      url "https://github.com/containeroo/dologen/releases/download/v1.1.0/dologen_1.1.0_darwin_amd64.tar.gz"
+      sha256 "2f7e547ece90b131a2b6f314bc4a258e7a10143a3a057d02b007ec6368f69416"
 
       def install
         bin.install "dologen"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/containeroo/dologen/releases/download/v1.0.1/dologen_1.0.1_darwin_amd64.tar.gz"
-      sha256 "84fa0b0aa31bb0b0fc7b0c585c107adeecbbfa72e508974c7ae7cfc51223cc53"
+    if Hardware::CPU.arm?
+      url "https://github.com/containeroo/dologen/releases/download/v1.1.0/dologen_1.1.0_darwin_arm64.tar.gz"
+      sha256 "0bfe85b73a2a73536eb7347a967a105b22e1a6c3f84022a88ec2c5800e99b8ea"
 
       def install
         bin.install "dologen"
@@ -29,24 +29,24 @@ class Dologen < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/containeroo/dologen/releases/download/v1.0.1/dologen_1.0.1_linux_amd64.tar.gz"
-      sha256 "0033a42abcb1a7c35c30ef8d3b644a6da04715b4d0032baf8df8ffb223e5abfe"
+      url "https://github.com/containeroo/dologen/releases/download/v1.1.0/dologen_1.1.0_linux_amd64.tar.gz"
+      sha256 "7cda13b0a219a3d3d21cb1411e1af66c07dc8026541d6c0e1491f13cd709b41f"
 
       def install
         bin.install "dologen"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/dologen/releases/download/v1.0.1/dologen_1.0.1_linux_armv6.tar.gz"
-      sha256 "dbd4e53469ace1aab21db69acaf863506b0ffd9efdf61f8cc6a59a29e74e8145"
+      url "https://github.com/containeroo/dologen/releases/download/v1.1.0/dologen_1.1.0_linux_armv6.tar.gz"
+      sha256 "e6a96f6fd2a5e883aba270aef03aa4174780370b5603a33bba05b756b1e19bbb"
 
       def install
         bin.install "dologen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/dologen/releases/download/v1.0.1/dologen_1.0.1_linux_arm64.tar.gz"
-      sha256 "d169ff8b6d0cc535199706359ceb2db074fb031428ee11e3449709ca434198df"
+      url "https://github.com/containeroo/dologen/releases/download/v1.1.0/dologen_1.1.0_linux_arm64.tar.gz"
+      sha256 "a1be22d883e29c2d9a4601d16ada5ec63a39bea05f4d888f864dcc785e9404a9"
 
       def install
         bin.install "dologen"
