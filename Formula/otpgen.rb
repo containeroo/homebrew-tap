@@ -5,51 +5,91 @@
 class Otpgen < Formula
   desc "Simple CLI tool to generate OTP tokens"
   homepage "https://containeroo.ch"
-  version "2.0.1"
+  version "3.0.0"
   license "GNU General Public License v3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/containeroo/otpgen/releases/download/v2.0.1/otpgen_2.0.1_darwin_arm64.tar.gz"
-      sha256 "ef0ed8d5849fc918e2ecc37391fc212052334c0c32bab75784cb9c4777038417"
+      url "https://github.com/containeroo/otpgen/releases/download/v3.0.0/otpgen_3.0.0_darwin_arm64.tar.gz"
+      sha256 "c30f0d52003c80ec96d460740c7df75af846cb5dfb922076fbfff75d1e3f1a53"
 
       def install
         bin.install "otpgen"
+
+        # Install bash completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "bash")
+        (bash_completion/"otpgen").write output
+
+        # Install zsh completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "zsh")
+        (zsh_completion/"_otpgen").write output
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/containeroo/otpgen/releases/download/v2.0.1/otpgen_2.0.1_darwin_amd64.tar.gz"
-      sha256 "6e019ecf18859fc6bf5db6d73833be1ed88fdf7ebd6ab5766a101647898fe021"
+      url "https://github.com/containeroo/otpgen/releases/download/v3.0.0/otpgen_3.0.0_darwin_amd64.tar.gz"
+      sha256 "f62965b21e9c3eb980ab2f3d6b9be5b8539a08fd6ed93dc636192b833396b45e"
 
       def install
         bin.install "otpgen"
+
+        # Install bash completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "bash")
+        (bash_completion/"otpgen").write output
+
+        # Install zsh completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "zsh")
+        (zsh_completion/"_otpgen").write output
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/otpgen/releases/download/v2.0.1/otpgen_2.0.1_linux_arm64.tar.gz"
-      sha256 "73df7ceb1d37b20b8df2c5f41183419dd9d21aa71349e1c507f8988283b6f3ed"
+    if Hardware::CPU.intel?
+      url "https://github.com/containeroo/otpgen/releases/download/v3.0.0/otpgen_3.0.0_linux_amd64.tar.gz"
+      sha256 "1bfb7c575d6ed598d2f6eebdc1846543ada45f044de4f85637e006786d22f3cf"
 
       def install
         bin.install "otpgen"
+
+        # Install bash completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "bash")
+        (bash_completion/"otpgen").write output
+
+        # Install zsh completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "zsh")
+        (zsh_completion/"_otpgen").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/containeroo/otpgen/releases/download/v2.0.1/otpgen_2.0.1_linux_amd64.tar.gz"
-      sha256 "176d30c5e91d25ee7f1c7646bbc7dba4c5864d4e16794eabd7b54c2f7b77c6b7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/containeroo/otpgen/releases/download/v3.0.0/otpgen_3.0.0_linux_arm64.tar.gz"
+      sha256 "11c7a3dcf6d4a4a4239d8f2a967250c98f8b21a381c2a7d4503c20e2de2c1062"
 
       def install
         bin.install "otpgen"
+
+        # Install bash completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "bash")
+        (bash_completion/"otpgen").write output
+
+        # Install zsh completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "zsh")
+        (zsh_completion/"_otpgen").write output
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/otpgen/releases/download/v2.0.1/otpgen_2.0.1_linux_armv6.tar.gz"
-      sha256 "c746c65cda1abf7f58d373b9e3f84ec05ace3718e5d415e6b803f4b7a4ad3366"
+      url "https://github.com/containeroo/otpgen/releases/download/v3.0.0/otpgen_3.0.0_linux_armv6.tar.gz"
+      sha256 "cc5234e5125344a5be805ecff196323f41527dff29e8c4503740747d72cf7aa1"
 
       def install
         bin.install "otpgen"
+
+        # Install bash completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "bash")
+        (bash_completion/"otpgen").write output
+
+        # Install zsh completion
+        output = Utils.safe_popen_read(bin/"otpgen", "completion", "zsh")
+        (zsh_completion/"_otpgen").write output
       end
     end
   end
@@ -57,6 +97,6 @@ class Otpgen < Formula
   depends_on "go" => :optional
 
   test do
-    system "#{bin}/otpgen --version"
+    system "#{bin}/otpgen version"
   end
 end
