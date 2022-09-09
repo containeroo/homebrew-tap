@@ -5,21 +5,23 @@
 class Certinfo < Formula
   desc "Get information about the certificate from one or more hostnames"
   homepage "https://containeroo.ch"
-  version "1.3.9"
+  version "1.3.10"
   license "GNU General Public License v3.0"
 
+  depends_on "go" => :optional
+
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.3.9/certinfo_1.3.9_darwin_arm64.tar.gz"
-      sha256 "7ed9b43079adb1253ee075f3fa6e4f50869d61400301e81febf9cb0fa1a0528a"
+    if Hardware::CPU.intel?
+      url "https://github.com/containeroo/certinfo/releases/download/v1.3.10/certinfo_1.3.10_darwin_amd64.tar.gz"
+      sha256 "79389adb7d3f492fddd565de6569000cbf4820ffcd973c8d09309db186e7133c"
 
       def install
         bin.install "certinfo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.3.9/certinfo_1.3.9_darwin_amd64.tar.gz"
-      sha256 "7a1e433c229a3c585769ad8138bfb7fa8fe1b6e621f0700a21448982435a6317"
+    if Hardware::CPU.arm?
+      url "https://github.com/containeroo/certinfo/releases/download/v1.3.10/certinfo_1.3.10_darwin_arm64.tar.gz"
+      sha256 "fb8ed90a59e63be832183e98e5d9c17e2c0bfec8e9066368fb2770185475139e"
 
       def install
         bin.install "certinfo"
@@ -29,32 +31,30 @@ class Certinfo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.3.9/certinfo_1.3.9_linux_arm64.tar.gz"
-      sha256 "b80fbaf2d7217ee2e7c1da8b7b6eff52d4a8d72f9dc319bce5100a3ca2497e04"
+      url "https://github.com/containeroo/certinfo/releases/download/v1.3.10/certinfo_1.3.10_linux_arm64.tar.gz"
+      sha256 "a3668758ae2d2b21ac5c92dd0cba3d7a7138fa5e1da5350647a3ea05f77c7069"
 
       def install
         bin.install "certinfo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.3.9/certinfo_1.3.9_linux_amd64.tar.gz"
-      sha256 "e28647433863bd86950f29ed93c3fddce0c82745a9f303556a2ea96dc6159c47"
+      url "https://github.com/containeroo/certinfo/releases/download/v1.3.10/certinfo_1.3.10_linux_amd64.tar.gz"
+      sha256 "2d466f38e44babab31ae41eb80baf18e7428f57c23f8e32bc5a4b54b1de22b62"
 
       def install
         bin.install "certinfo"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/certinfo/releases/download/v1.3.9/certinfo_1.3.9_linux_armv6.tar.gz"
-      sha256 "eac67fe80cdacbade19710180542b451881bf38561cc72807014f843c6b1bcea"
+      url "https://github.com/containeroo/certinfo/releases/download/v1.3.10/certinfo_1.3.10_linux_armv6.tar.gz"
+      sha256 "54c7c37cd508080dd20157fa09ef21d00cf21151bb022a2484ef44463f3f2b1b"
 
       def install
         bin.install "certinfo"
       end
     end
   end
-
-  depends_on "go" => :optional
 
   test do
     system "#{bin}/certinfo --version"
