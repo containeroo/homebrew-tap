@@ -5,23 +5,23 @@
 class Syncflaer < Formula
   desc "Synchronize Traefik host rules and/or Kubernetes Ingresses with Cloudflare"
   homepage "https://containeroo.ch"
-  version "5.5.1"
+  version "5.5.2"
   license "GNU General Public License v3.0"
 
   depends_on "go" => :optional
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.1/SyncFlaer_5.5.1_darwin_amd64.tar.gz"
-      sha256 "8cb41826fee46b056fd1dfb142503757729172c22573a76b9f327b444a9efc4a"
+    if Hardware::CPU.arm?
+      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.2/SyncFlaer_5.5.2_darwin_arm64.tar.gz"
+      sha256 "2ccd171400fdfc45f0bafa1ef8212444bdc0ef3806a0d2c567183085212afde7"
 
       def install
         bin.install "syncflaer"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.1/SyncFlaer_5.5.1_darwin_arm64.tar.gz"
-      sha256 "bbaf8f7fcbd9cde95e10cf7b11755d385bceed3c47070414c55acd0472f2bb62"
+    if Hardware::CPU.intel?
+      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.2/SyncFlaer_5.5.2_darwin_amd64.tar.gz"
+      sha256 "d7f57b9d3ddfed17d45a00652c128bad7a45479b336f0df3edf434134a39d127"
 
       def install
         bin.install "syncflaer"
@@ -31,24 +31,24 @@ class Syncflaer < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.1/SyncFlaer_5.5.1_linux_amd64.tar.gz"
-      sha256 "ce217743e5cc930b65efc37c6c2e1072f8f244c15d213800aac19b06f159113b"
+      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.2/SyncFlaer_5.5.2_linux_amd64.tar.gz"
+      sha256 "900152dcc90ca1a3e262ea0c911ccc2c9cb43a63372d19f6ec683951f7657da8"
 
       def install
         bin.install "syncflaer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.1/SyncFlaer_5.5.1_linux_arm64.tar.gz"
-      sha256 "2dcd90e8f092cd6d4c977919fc9f9e41dbb0974e944c4093167b3064ef72c320"
+      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.2/SyncFlaer_5.5.2_linux_arm64.tar.gz"
+      sha256 "64d5853506c6d926b1d9bab34c51cdb1d30e74d38315e8398dce88db0022fdf8"
 
       def install
         bin.install "syncflaer"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.1/SyncFlaer_5.5.1_linux_armv6.tar.gz"
-      sha256 "e88ed854688b019e5ac83bb30aac2fb9a5b7ad3f0c143b8911b22a3b096c6142"
+      url "https://github.com/containeroo/SyncFlaer/releases/download/v5.5.2/SyncFlaer_5.5.2_linux_armv6.tar.gz"
+      sha256 "4dedd58cf6f82f427a67b5944d24f9ae1e94743a17d8f3eb7ce9c12608630e30"
 
       def install
         bin.install "syncflaer"
