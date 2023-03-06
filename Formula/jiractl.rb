@@ -5,15 +5,15 @@
 class Jiractl < Formula
   desc "A blazing fast CLI tool to do Jira stuff like a real hacker"
   homepage "https://containeroo.ch"
-  version "1.0.0"
+  version "1.1.0"
   license "GNU General Public License v3.0"
 
   depends_on "go" => :optional
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/containeroo/jiractl/releases/download/v1.0.0/jiractl_1.0.0_darwin_arm64.tar.gz"
-      sha256 "901b610117aa02eaca98afc3bf86acbff5753ab32f872be32b15b1040b2c881e"
+    if Hardware::CPU.intel?
+      url "https://github.com/containeroo/jiractl/releases/download/v1.1.0/jiractl_1.1.0_darwin_amd64.tar.gz"
+      sha256 "1ac0a3c4ce6844ef17737d8d379ad90f403735275f80f47593f6f36d6649fe42"
 
       def install
         bin.install "jiractl"
@@ -27,9 +27,9 @@ class Jiractl < Formula
         (zsh_completion/"_jiractl").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/containeroo/jiractl/releases/download/v1.0.0/jiractl_1.0.0_darwin_amd64.tar.gz"
-      sha256 "fc1fccb0af5509f375b60a1d6d57c1d1d9e11c3f226a514a0d78e6c672ecc3e7"
+    if Hardware::CPU.arm?
+      url "https://github.com/containeroo/jiractl/releases/download/v1.1.0/jiractl_1.1.0_darwin_arm64.tar.gz"
+      sha256 "2e83e168eeb6edbcf15f6a17664c90c87159b7983a652498c09425714edeec0e"
 
       def install
         bin.install "jiractl"
@@ -47,8 +47,8 @@ class Jiractl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/containeroo/jiractl/releases/download/v1.0.0/jiractl_1.0.0_linux_amd64.tar.gz"
-      sha256 "f09b3624afcaafffce18e1192b80f2d2ef393d8473dc367d10744a0f384f01ff"
+      url "https://github.com/containeroo/jiractl/releases/download/v1.1.0/jiractl_1.1.0_linux_amd64.tar.gz"
+      sha256 "06a345c8f5d0cad5784c87fa09bfea3f4f974c9d16b9b5ae31df5b2e2b29152f"
 
       def install
         bin.install "jiractl"
@@ -63,8 +63,8 @@ class Jiractl < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/jiractl/releases/download/v1.0.0/jiractl_1.0.0_linux_arm64.tar.gz"
-      sha256 "26871853ac567be2400794cbf05ae1d81b3660e36bc8d5b405b1b0ecd5bba1a8"
+      url "https://github.com/containeroo/jiractl/releases/download/v1.1.0/jiractl_1.1.0_linux_arm64.tar.gz"
+      sha256 "23263decf67df60a946456d836421e282e0ac7c68fe6fb2997be4a33e0e4c91f"
 
       def install
         bin.install "jiractl"
@@ -79,8 +79,8 @@ class Jiractl < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/jiractl/releases/download/v1.0.0/jiractl_1.0.0_linux_armv6.tar.gz"
-      sha256 "ce79491db617b698eb3fae810d97f5077a07089ffb54ce50988b72eef6a7d325"
+      url "https://github.com/containeroo/jiractl/releases/download/v1.1.0/jiractl_1.1.0_linux_armv6.tar.gz"
+      sha256 "29b084fc31082ab333c1fd33896314ca33570871613aa65b77aa5cb86a82e598"
 
       def install
         bin.install "jiractl"
