@@ -5,15 +5,15 @@
 class CiThief < Formula
   desc "Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables."
   homepage "https://containeroo.ch"
-  version "2.0.0"
+  version "2.0.1"
   license "GNU General Public License v3.0"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.0/ci-thief_2.0.0_darwin_arm64.tar.gz"
-      sha256 "6e7705c819a7ebe5c63d7028bd03b93da0001011bad2ea274ad3da18a962d15f"
+      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.1/ci-thief_2.0.1_darwin_arm64.tar.gz"
+      sha256 "6c838000754590dc03580dfb99e2bfcb29675ee74c8beccb1276602589a2669e"
 
       def install
         bin.install "ci-thief"
@@ -28,8 +28,8 @@ class CiThief < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.0/ci-thief_2.0.0_darwin_amd64.tar.gz"
-      sha256 "8e10ec35320fda9eb3bcd878604c6a70974d63b34826c640ec9f330e7282a274"
+      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.1/ci-thief_2.0.1_darwin_amd64.tar.gz"
+      sha256 "0c4972fe3a8d93cac4b846673ba4c5144bad72ca95bd13a031e6dd9c2e196221"
 
       def install
         bin.install "ci-thief"
@@ -47,8 +47,8 @@ class CiThief < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.0/ci-thief_2.0.0_linux_arm64.tar.gz"
-      sha256 "ea43989b3fbdb5ee7551ee0aa0d0428cbc44b5fb58bd253f5a0d817eb5541e93"
+      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.1/ci-thief_2.0.1_linux_arm64.tar.gz"
+      sha256 "8853256fbf32ef59f7a2deb30799bb8eadcacc49b3f3de0f9120baf8a0c3ed91"
 
       def install
         bin.install "ci-thief"
@@ -63,8 +63,8 @@ class CiThief < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.0/ci-thief_2.0.0_linux_armv6.tar.gz"
-      sha256 "4e099c3fd6df1823ae97191a7664cc164545a2ccb6d99be9c065d927fb11a549"
+      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.1/ci-thief_2.0.1_linux_armv6.tar.gz"
+      sha256 "08771a29891044620ad508bfa0fea4cae7c921f55e1e8a727e47cda65a796aa2"
 
       def install
         bin.install "ci-thief"
@@ -79,8 +79,8 @@ class CiThief < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.0/ci-thief_2.0.0_linux_amd64.tar.gz"
-      sha256 "fb613a8a23b36c60554f1bc78855c9981992ea6e5ff5acb2948c99fa1177fb64"
+      url "https://github.com/containeroo/ci-thief/releases/download/v2.0.1/ci-thief_2.0.1_linux_amd64.tar.gz"
+      sha256 "623f77520388a3d0bca9735cbdcb1f9042627869c928f426741414072ca1c602"
 
       def install
         bin.install "ci-thief"
