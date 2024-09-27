@@ -5,23 +5,23 @@
 class CfopGenerator < Formula
   desc "CLI tool to convert exported Cloudflare zones to cloudflare-operator DNSRecord objects"
   homepage "https://containeroo.ch"
-  version "0.0.2"
+  version "0.0.3"
   license "GNU General Public License v3.0"
 
   depends_on "go" => :optional
 
   on_macos do
     on_intel do
-      url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.2/cfop-generator_0.0.2_darwin_amd64.tar.gz"
-      sha256 "06dcd93782a83d7ccc0c2c63ded5f88ce3fff7af279e4b49068ba3003fc056b8"
+      url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.3/cfop-generator_0.0.3_darwin_amd64.tar.gz"
+      sha256 "6c716592d322911406b49eda7a83e71429ce6c37d4fee30559800dbb8609e53a"
 
       def install
         bin.install "cfop-generator"
       end
     end
     on_arm do
-      url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.2/cfop-generator_0.0.2_darwin_arm64.tar.gz"
-      sha256 "339d4157fab0973dc69dbea2211d7efbee78ee1b44c8741e2153d3a7fa523f07"
+      url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.3/cfop-generator_0.0.3_darwin_arm64.tar.gz"
+      sha256 "28f131ab2a25a6d8c5d17c63ddef19349611f5e0a22f494ff9076e10547e60e2"
 
       def install
         bin.install "cfop-generator"
@@ -32,8 +32,8 @@ class CfopGenerator < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.2/cfop-generator_0.0.2_linux_amd64.tar.gz"
-        sha256 "766d69df87ba11adfd2ba7f803e7b29b82b2cf73a8e84f62a86ea0b037b84914"
+        url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.3/cfop-generator_0.0.3_linux_amd64.tar.gz"
+        sha256 "e19f6c70626a551edb9a90f0d485840b7d6ea831b6f7afe654b8f420ca328b9f"
 
         def install
           bin.install "cfop-generator"
@@ -42,8 +42,8 @@ class CfopGenerator < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.2/cfop-generator_0.0.2_linux_armv6.tar.gz"
-        sha256 "5e066fecbf880fa73e91cf8040be267d3c04cc1dd35044bbc1c833f966b61fb6"
+        url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.3/cfop-generator_0.0.3_linux_armv6.tar.gz"
+        sha256 "24fd5532ae5eafa9d1fc489269b6e3a58eca7fbf5cc30cd7392fcb1f1407e014"
 
         def install
           bin.install "cfop-generator"
@@ -52,8 +52,8 @@ class CfopGenerator < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.2/cfop-generator_0.0.2_linux_arm64.tar.gz"
-        sha256 "e8d29f74798acb116968ff6ec889e34b40a30c102678a5c293417024f9319d60"
+        url "https://github.com/containeroo/cfop-generator/releases/download/v0.0.3/cfop-generator_0.0.3_linux_arm64.tar.gz"
+        sha256 "27dd708a89633ab092b766d3acf2ebd428e71b7edbbbca59b311c803676b0067"
 
         def install
           bin.install "cfop-generator"
