@@ -13,22 +13,22 @@ cask "ci-thief" do
   on_macos do
     on_intel do
       url "https://github.com/containeroo/ci-thief/releases/download/v2.2.0/ci-thief_2.2.0_darwin_amd64.tar.gz"
-      sha256 "c8156d7fe693365c46ccaf46a2b18c0570764d03d0282373e7d7a9a7e99bf8f0"
+      sha256 "92f62d392b64c7af92c95ba0037018fc0066dce7c54e876b99edd02a768bd9d1"
     end
     on_arm do
       url "https://github.com/containeroo/ci-thief/releases/download/v2.2.0/ci-thief_2.2.0_darwin_arm64.tar.gz"
-      sha256 "6956b99d5ab8fa7d595e18f26dabda98e94c0658cd8cc4bbb41ed6e6a9b392fa"
+      sha256 "06988e92fc809d44e317e1c9b356669740608731b8a04c84b53d5e379e2155de"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/containeroo/ci-thief/releases/download/v2.2.0/ci-thief_2.2.0_linux_amd64.tar.gz"
-      sha256 "abf14d40a88a2dc36b100c89906580ff056e1e7ed816d1aa4eb288dbdf0d97ec"
+      sha256 "f01027be9571c1cfa35db878f04715ed1b9277d08304815273df10b2f8d9c8f4"
     end
     on_arm do
       url "https://github.com/containeroo/ci-thief/releases/download/v2.2.0/ci-thief_2.2.0_linux_arm64.tar.gz"
-      sha256 "549936017e760f3cbde462c5b2327c24542c33ccae01540e073c975e972fd102"
+      sha256 "7abb0871a00294c878b02303d7fc077817201fb61e0c9f544430240f88ee6486"
     end
   end
 
@@ -38,8 +38,5 @@ cask "ci-thief" do
     end
   end
 
-  zap trash: [
-      ~/.config/ci-thief,
-    ]
-
+  # No zap stanza required
 end
