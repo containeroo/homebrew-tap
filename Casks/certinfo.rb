@@ -3,7 +3,7 @@ cask "certinfo" do
   name "certinfo"
   desc "Get information about the certificate from one or more hostnames"
   homepage "https://containeroo.ch"
-  version "1.4.4"
+  version "1.4.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "certinfo" do
   on_macos do
     on_intel do
       url "https://github.com/containeroo/certinfo/releases/download/v#{version}/certinfo_#{version}_darwin_amd64.tar.gz"
-      sha256 "2925583218aae5440a5fdfbc6bf87bdcb9ef28c92e2074684cb54df92bae806e"
+      sha256 "8039531be455b4dd5d4c3bf031a72c1bc07866980a0b15535ffedd3253492f5d"
     end
     on_arm do
       url "https://github.com/containeroo/certinfo/releases/download/v#{version}/certinfo_#{version}_darwin_arm64.tar.gz"
-      sha256 "d5ccb9f575b476d302d4b3f9cd1aa0cbfcc5ffa19684a43bbbe9aa0dbefea549"
+      sha256 "76e7597def25bf61e70d648a2557aa009107751208964112fca607678dece1f1"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/containeroo/certinfo/releases/download/v#{version}/certinfo_#{version}_linux_amd64.tar.gz"
-      sha256 "c1e946129f997e8c0926bb7c5fab26c0bb683072233b687a74323a4f654993a9"
+      sha256 "4f29472c78492c2d7e7cf8dc4f86e0b109ac45b5ada83fe26b53a459db914df3"
     end
     on_arm do
       url "https://github.com/containeroo/certinfo/releases/download/v#{version}/certinfo_#{version}_linux_arm64.tar.gz"
-      sha256 "9838668eab58737d6a42b51dd30a9c7e0cae1b47b76c9f2d732324f397aadd84"
+      sha256 "50c33d1575ffd6109958896171484426087b137bc83b7b0f4b3c671610004098"
     end
   end
 
