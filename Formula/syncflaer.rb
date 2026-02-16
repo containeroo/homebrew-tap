@@ -7,6 +7,7 @@ class Syncflaer < Formula
   homepage "https://containeroo.ch"
   version "5.5.3"
   license "GNU General Public License v3.0"
+  deprecate! date: "2026-02-16", because: :unmaintained
 
   depends_on "go" => :optional
 
