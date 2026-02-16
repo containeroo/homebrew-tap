@@ -3,7 +3,7 @@ cask "otpgen" do
   name "otpgen"
   desc "Simple CLI tool to generate OTP tokens"
   homepage "https://containeroo.ch"
-  version "3.0.3"
+  version "3.0.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,27 +16,27 @@ cask "otpgen" do
   on_macos do
     on_intel do
       url "https://github.com/containeroo/otpgen/releases/download/v#{version}/otpgen_#{version}_darwin_amd64.tar.gz"
-      sha256 "a99a7642f1bf8402007b5d0576e9edff3a2add816aced4f702d80bcdfacbe6d4"
+      sha256 "bdd954da535def2ea4e81b69251651ceac2ad954d7704150f520be949595f7c6"
     end
     on_arm do
       url "https://github.com/containeroo/otpgen/releases/download/v#{version}/otpgen_#{version}_darwin_arm64.tar.gz"
-      sha256 "80182665c0f78bbb3774b6772a323b8037a20b863109fefddea8981a1da8631d"
+      sha256 "d37a427f71abfd5b47c2c02d096eb000bd955a99a929d327fed034b03d762c93"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/containeroo/otpgen/releases/download/v#{version}/otpgen_#{version}_linux_amd64.tar.gz"
-      sha256 "9ac8ff8e1f3e50e8dc1fdc3e0df49e9a9229ab43c22af12a5f5c5a6f48ed272a"
+      sha256 "5ac1603e0313d6a5636e1480b171bfda841a1852648fe9151f07f442b2e0bc67"
     end
     on_arm do
       url "https://github.com/containeroo/otpgen/releases/download/v#{version}/otpgen_#{version}_linux_arm64.tar.gz"
-      sha256 "4bea9b34ec917556fcb6e64d35181726f08298d3c26d3cad7554346ee551d50a"
+      sha256 "53c96f6e6739e3844c6498e444e3f559120e35bb4ea6a4aa222ffa4be0ff870c"
     end
   end
 
   postflight do
-    xattr -dr com.apple.quarantine "#{staged_path}/otpgen" || true
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/otpgen"], must_succeed: false
   end
 
   # No zap stanza required
