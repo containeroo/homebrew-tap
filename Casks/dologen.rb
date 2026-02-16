@@ -3,7 +3,7 @@ cask "dologen" do
   name "dologen"
   desc "Simple CLI tool to generate Docker config.json with registry credentials"
   homepage "https://containeroo.ch"
-  version "1.2.2"
+  version "1.2.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,22 +16,22 @@ cask "dologen" do
   on_macos do
     on_intel do
       url "https://github.com/containeroo/dologen/releases/download/v#{version}/dologen_#{version}_darwin_amd64.tar.gz"
-      sha256 "150714dddf755275adec4992816c936f2682c0738db0dfe771e48a12f71e5609"
+      sha256 "a1520734d21a367ecf1de2e138a06eba1e4f9d3fe33ff4c49b30c3b0af2359b6"
     end
     on_arm do
       url "https://github.com/containeroo/dologen/releases/download/v#{version}/dologen_#{version}_darwin_arm64.tar.gz"
-      sha256 "39582415c9a64c7c322eed6d6265aab4c05c0fb3c46fd799025aac8bdf6c23fe"
+      sha256 "94304a3fdaf0fd967a503c3ad84c42789643df62ecf9d9b18e279cbb50961104"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/containeroo/dologen/releases/download/v#{version}/dologen_#{version}_linux_amd64.tar.gz"
-      sha256 "652bf1eb324c28795562e09d5a2c66c3cb36756f864f34e7802c010f4f490fec"
+      sha256 "45fa5a49fa8927990c79f7142e9b727f3026f3dd1bcac509fd6cb1ad9b1e12a2"
     end
     on_arm do
       url "https://github.com/containeroo/dologen/releases/download/v#{version}/dologen_#{version}_linux_arm64.tar.gz"
-      sha256 "b3b1930e73cac4cd52f403d6338548847ef8da098176d3c9f79b7fe19ca941b4"
+      sha256 "91e15000490b4930711bc77179709925e1440ce86b6f2b616ec7d7a0ef79f488"
     end
   end
 
