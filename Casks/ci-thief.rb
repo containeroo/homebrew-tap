@@ -3,7 +3,7 @@ cask "ci-thief" do
   name "ci-thief"
   desc "Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables."
   homepage "https://containeroo.ch"
-  version "2.3.2"
+  version "2.3.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,22 +16,22 @@ cask "ci-thief" do
   on_macos do
     on_intel do
       url "https://github.com/containeroo/ci-thief/releases/download/v#{version}/ci-thief_#{version}_darwin_amd64.tar.gz"
-      sha256 "69ac83fc14a85b132d7d8c58deb9a933c4e71dba84aacef8ccac961685d7b9b5"
+      sha256 "8656a77b22c7137def08edd46fe7754f32c59c7b4aa7fbad459e9cf25698d996"
     end
     on_arm do
       url "https://github.com/containeroo/ci-thief/releases/download/v#{version}/ci-thief_#{version}_darwin_arm64.tar.gz"
-      sha256 "61c4557b73e6b90aeeb481305c5cbd10531688678f155cdf3621dc2279734077"
+      sha256 "6d08f0d53fd884b45084278c188964c3b9db52ff757755afa632628a509e17d7"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/containeroo/ci-thief/releases/download/v#{version}/ci-thief_#{version}_linux_amd64.tar.gz"
-      sha256 "fab20945ec4056e98d970e7d0b3846f0e7f53c657e76208f78b99e64f99ffd59"
+      sha256 "f67521f9f6ba75677941d232f3c3f6be40d99602978b5cee2ac8a931bc3906e6"
     end
     on_arm do
       url "https://github.com/containeroo/ci-thief/releases/download/v#{version}/ci-thief_#{version}_linux_arm64.tar.gz"
-      sha256 "709befe617356ab9ab0bda6f4e71a1f57e36c65e84cbdf7fa7c5fc05303ba89b"
+      sha256 "b0c57de1fc4db91a4a66cbcd814d30c0a242294170a9bcc5599fa09872904785"
     end
   end
 
