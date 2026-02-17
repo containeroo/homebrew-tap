@@ -3,7 +3,7 @@ cask "otpgen" do
   name "otpgen"
   desc "Simple CLI tool to generate OTP tokens"
   homepage "https://containeroo.ch"
-  version "3.0.4"
+  version "3.0.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,22 +16,22 @@ cask "otpgen" do
   on_macos do
     on_intel do
       url "https://github.com/containeroo/otpgen/releases/download/v#{version}/otpgen_#{version}_darwin_amd64.tar.gz"
-      sha256 "bdd954da535def2ea4e81b69251651ceac2ad954d7704150f520be949595f7c6"
+      sha256 "3a42c2e71fb973e597e9061321031bd9004653bc019ac0fbf7f9d1204bc99a3f"
     end
     on_arm do
       url "https://github.com/containeroo/otpgen/releases/download/v#{version}/otpgen_#{version}_darwin_arm64.tar.gz"
-      sha256 "d37a427f71abfd5b47c2c02d096eb000bd955a99a929d327fed034b03d762c93"
+      sha256 "0ec9011bfc560998ec8d8166a29f144c4e6a61dc2a32596a6c7e2092ebaf18b2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/containeroo/otpgen/releases/download/v#{version}/otpgen_#{version}_linux_amd64.tar.gz"
-      sha256 "5ac1603e0313d6a5636e1480b171bfda841a1852648fe9151f07f442b2e0bc67"
+      sha256 "b4b07db242bfea3aaf696dd580a426f6b77b9e108c683713b4c66737746604ec"
     end
     on_arm do
       url "https://github.com/containeroo/otpgen/releases/download/v#{version}/otpgen_#{version}_linux_arm64.tar.gz"
-      sha256 "53c96f6e6739e3844c6498e444e3f559120e35bb4ea6a4aa222ffa4be0ff870c"
+      sha256 "be12b8183f66273436758828a306dbec7062e5a1922137c6f0bae5f166158a41"
     end
   end
 
