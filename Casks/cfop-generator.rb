@@ -3,7 +3,7 @@ cask "cfop-generator" do
   name "cfop-generator"
   desc "CLI tool to convert exported Cloudflare zones to cloudflare-operator DNSRecord objects"
   homepage "https://containeroo.ch"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,22 +16,22 @@ cask "cfop-generator" do
   on_macos do
     on_intel do
       url "https://github.com/containeroo/cfop-generator/releases/download/v#{version}/cfop-generator_#{version}_darwin_amd64.tar.gz"
-      sha256 "621da8ec7bfaa820a8f70fef5fac69025f9cfc8224222689fdb4589c773d8501"
+      sha256 "2932619bfb1250f894c7029f12cbcbe655f56e8a13bba6d520af153ef0da96ac"
     end
     on_arm do
       url "https://github.com/containeroo/cfop-generator/releases/download/v#{version}/cfop-generator_#{version}_darwin_arm64.tar.gz"
-      sha256 "080b23112ec9f265a65b409d5917759b7bbe29bd2ef99287b3c354c1f0b86f80"
+      sha256 "3d2a42da4fd6b8c0a8bf91ba956ffdf3cb3f4642a9abcea3cdd34f0e9c5a95f6"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/containeroo/cfop-generator/releases/download/v#{version}/cfop-generator_#{version}_linux_amd64.tar.gz"
-      sha256 "65b3455f806c0aaf9222444d2647eb314e08dfadf1e30a882a92fcdb5175c490"
+      sha256 "acb7b785d7ded821d8bbaba14ea0eb667bd377473b8dd09a1d1c2ddac9b56cd7"
     end
     on_arm do
       url "https://github.com/containeroo/cfop-generator/releases/download/v#{version}/cfop-generator_#{version}_linux_arm64.tar.gz"
-      sha256 "f48d34e29689c69530070dd4c66c4214b436d79a1aeb5932f9e98520d4d72a87"
+      sha256 "2ead34a05ba3a3479873fa3fca15a56fe7241e2e3e42be0fc28d81cfc3a2e105"
     end
   end
 
