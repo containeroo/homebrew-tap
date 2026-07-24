@@ -9,6 +9,8 @@ cask "dologen" do
     skip "Auto-generated on release."
   end
 
+  deprecate! date: "2026-07-24", because: :unmaintained
+
   binary "dologen"
   bash_completion "completions/dologen.bash"
   zsh_completion "completions/dologen.zsh"

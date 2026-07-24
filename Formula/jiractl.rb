@@ -7,7 +7,7 @@ class Jiractl < Formula
   homepage "https://containeroo.ch"
   version "1.1.0"
   license "GNU General Public License v3.0"
-  deprecate! date: "2026-02-16", because: :unmaintained
+  deprecate! date: "2026-02-16", because: :repo_archived
 
   depends_on "go" => :optional
 

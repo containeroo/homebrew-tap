@@ -9,6 +9,8 @@ cask "cfop-generator" do
     skip "Auto-generated on release."
   end
 
+  deprecate! date: "2026-07-24", because: :unmaintained
+
   binary "cfop-generator"
   bash_completion "completions/cfop-generator.bash"
   zsh_completion "completions/cfop-generator.zsh"

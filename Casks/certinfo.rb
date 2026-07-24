@@ -32,6 +32,8 @@ cask "certinfo" do
     skip "Auto-generated on release."
   end
 
+  deprecate! date: "2026-07-24", because: :unmaintained
+
   binary "certinfo"
 
   postflight do
