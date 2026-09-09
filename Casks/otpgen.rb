@@ -35,8 +35,12 @@ cask "otpgen" do
     end
   end
 
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/otpgen"], must_succeed: false
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr",
+          args: ["-dr", "com.apple.quarantine", "{{staged_path}}/otpgen"],
+          must_succeed: false
+    end
   end
 
   # No zap stanza required
